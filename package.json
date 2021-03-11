@@ -4,7 +4,8 @@
   "description": "A Cookie Concent Page used in SuperQuickMail and other Projects",
   "main": "index.ts",
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "start": "ts-node-dev --respawn --transpile-only --debug --poll ./index.ts"
   },
   "repository": {
     "type": "git",
