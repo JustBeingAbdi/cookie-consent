@@ -1,6 +1,7 @@
 import express from "express";
 import path from "path";
 import bodyparser from "body-parser";
+import ExpressLogger from "leekslazylogger-express";
 import ejs from "ejs";
 import * as Config from "./../Config";
 
@@ -8,7 +9,12 @@ export class Server {
     public async init(port): Promise<any> {
         if(!Config.redirecturl) return console.log("Config hasn't been setup. Aborting...");
         let app = express();
+        const log = new ExpressLogger({
+    name: 'Cookie Consent',
+});
+
     app.use(bodyparser.json());
+    app.use(log.express());
     app.use(bodyparser.urlencoded({ extended: true }));
     app.engine("html", ejs.renderFile);
     app.set('view engine', 'ejs');
