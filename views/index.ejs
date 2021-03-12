@@ -138,8 +138,10 @@ shard {
 <div id="consent" class="container text-center text-light" style="padding-top: 110px; padding-bottom: 20px;">
 <h2>This site uses cookies</h2>
 <p>We use cookies to optimize your user experience as well as to send improved content. Click Accept if you accept these cookies.</p>
-<a href="<%= config.policyurl %>">Cookie Policy</a>
+
 <a href="#" class="btn btn-primary" onclick="Accept()">I Accept all Cookies</a><a href="javascript:history.back()" class="btn btn-danger" >Cancel</a>
+
+<a href="<%= config.policyurl %>">Cookie Policy</a>
 <script>
 
 var data = (localStorage.getItem("agree")) || (localStorage.setItem("agree", false));
