@@ -32,6 +32,7 @@ export class Server {
     
 
     app.listen(port);
+        console.log('Webserver online on port ' + port);
 
 
 
