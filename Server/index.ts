@@ -28,6 +28,9 @@ export class Server {
         res.render("index", {
             config: Config
         });
+    });
+    app.get("/reset", async(req, res) => {
+        res.render("reset");
     })
     
 
